@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Raleway-Black";
+  src: url(/fonts/Raleway-Black.woff) format("woff"),
+  url(/fonts/Raleway-Black.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url(/fonts/Raleway-Regular.woff) format("woff"),
+  url(/fonts/Raleway-Regular.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url(/fonts/Raleway-Medium.woff) format("woff"),
+  url(/fonts/Raleway-Medium.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url(/fonts/Raleway-Bold.woff) format("woff"),
+  url(/fonts/Raleway-Bold.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url(/fonts/Raleway-Medium.woff) format("woff"),
+  url(/fonts/Raleway-Medium.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url(/fonts/Raleway-Thin.woff) format("woff"),
+  url(/fonts/Raleway-Thin.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+:root 
+{
+  --dark: 0, 0, 0;
+  --light: 255, 255, 255;
+}
+
+@layer base{
+  
+  body
+  {
+    @apply font-[Raleway-Regular]
+  }
+
+  h1,h2,h3,h4,h5
+  {
+    @apply font-[Raleway-Medium]
+  }
+
+  h2 {
+    @apply text-xxl leading-[1.1] uppercase  text-balance
+  }
+
+  .anchor {
+    @apply  relative  inline-flex gap-4 font-bold after:content-[''] after:absolute after:-bottom-[2px] after:left-0 after:w-full after:h-[1px]  after:bg-dark 
+  }
+
+}
+@layer components{
+   
+  .container
+  {
+    @apply max-w-[1400px] mx-auto w-full px-1.5
+  }
+  .nav
+  {
+    @apply text-[24px]
+  }
+
+  .slide-in, 
+  .slide-out  {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #0f0f0f;
+      transform-origin: bottom;
+      z-index: 9999;
+  }
+  
+  .slide-out {
+      transform-origin: top;
+  }
+  
+
+  .input-wrap  {
+    @apply mb-5
+  }
+  label {
+    @apply block text-xs
+  }
+
+  input, textarea {
+    @apply border-b border-dark border-opacity-50 block w-full
+  }
+
+  textarea {
+  @apply resize-none min-h-24
+  } 
+  
+}
+@layer utilities{
+}
